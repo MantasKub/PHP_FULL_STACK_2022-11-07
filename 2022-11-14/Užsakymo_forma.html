@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Užsakymo forma</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h4 {
+      text-align: left;
+      padding-top: 20px;
+      padding-left: 25px;
+      margin: 0;
+    }
+
+    hr {
+      width: 820px;
+      color: rgb(206, 206, 206);
+      height: 2px;
+      margin-left: 25px;
+    }
+
+    .box {
+      width: 860px;
+      height: 600px;
+      margin-left: 50px;
+      text-align: center;
+      background-color: rgb(248, 248, 248);
+      opacity: 0.8;
+      border: rgb(206, 206, 206) solid 1px;
+    }
+
+    button {
+      background-color: white;
+      border-color: white;
+      width: 30%;
+      height: 180px;
+      float: left;
+      margin-left: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      width: 100px;
+      margin: auto;
+      display: block;
+      align-content: center;
+    }
+
+    .omniva img {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .dpd img {
+      width: 70px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+
+    input[type=radio] {
+      margin-bottom: 8px;
+    }
+
+    .miestas {
+      text-align: left;
+      width: 50%;
+      float: left;
+      padding-left: 25px;
+      padding-top: 20px;
+    }
+
+    .adresas {
+      text-align: left;
+      width: 50%;
+      float: left;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 20px;
+    }
+
+    select {
+      width: 100%;
+      height: 40px;
+      background-color: #f1f1f1;
+      border: 1px solid gray;
+      margin-top: 8px;
+      padding-left: 5px;
+    }
+
+    .vardas {
+      text-align: left;
+      width: 50%;
+      float: left;
+      padding-left: 25px;
+      padding-top: 20px;
+    }
+
+    .pavarde {
+      text-align: left;
+      width: 50%;
+      float: left;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 20px;
+    }
+
+    input[type=text] {
+      width: 100%;
+      height: 40px;
+      background-color: #f1f1f1;
+      border: 1px solid gray;
+      margin-top: 8px;
+    }
+
+    .tel {
+      text-align: left;
+      width: 50%;
+      float: left;
+      padding-left: 25px;
+      padding-top: 20px;
+    }
+
+    input[type=tel] {
+      width: 100%;
+      height: 40px;
+      background-color: #f1f1f1;
+      border: 1px solid gray;
+      margin-top: 8px;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+
+</head>
+<div class="box">
+  <h4>Pristatymas į paštomatus</h4>
+  <hr>
+  <div class="pasirinkimas">
+    <div class="clearfix">
+      <button class="lp" type="submit">
+        <label>
+          <input type="radio" name="paštomatas" />
+          <img src="https://www.siusk24.lt/uploads/terms_couriers_page/image_top/21/lpxpress.png" alt="Lp Express logo">
+          <strong>Atsiėmimas LP EXPRESS paštomate</strong>
+          <p>2-4 darbo dienos</p>
+          <p><strong>1,99 </strong></p>
+        </label>
+      </button>
+      <button class="omniva" type="submit">
+        <label>
+          <input type="radio" name="paštomatas" />
+          <img src="https://lightamber.com/wp-content/uploads/2014/03/omniva-logo.jpg" alt="Omniva logo">
+          <strong>Atsiėmimas LP EXPRESS paštomate</strong>
+          <p>2-4 darbo dienos</p>
+          <p><strong>1,99 </strong></p>
+        </label>
+      </button>
+      <button class="dpd" type="submit">
+        <label>
+          <input type="radio" name="paštomatas" />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/DPD_logo_%282015%29.svg/2560px-DPD_logo_%282015%29.svg.png"
+            alt="DPD logo">
+          <strong>Atsiėmimas LP EXPRESS paštomate</strong>
+          <p>2-4 darbo dienos</p>
+          <p><strong>1,99 </strong></p>
+        </label>
+      </button>
+    </div>
+  </div>
+
+  <h4>Pasirinkite pristatymo vietą</h4>
+  <div class="clearfix">
+    <div class="miestas">
+      <label>Miestas*</label><br />
+      <select name="miestas id=miestas">
+        <option value="Vilnius">Vilnius</option>
+        <option value="Kaunas">Kaunas</option>
+        <option value="Utena">Utena</option>
+        <option value="Anykščiai">Anykščiai</option>
+        <option value="Klaipėda">Klaipėda</option>
+      </select>
+    </div>
+    <div class="adresas">
+      <label for="pastomatas">Paštomato adresas (paštomatas)*</label><br />
+      <select name="pastomatas id=pastomatas">
+        <option value="IKI (Aukštakalnio g. 52)">Aukštakalnio g. 52</option>
+        <option value="Rimi (Basanavičiaus g. 13)">Basanavičiaus g. 13</option>
+        <option value="Maxima (Aušros g. 2)">Aušros g. 2</option>
+      </select>
+    </div>
+  </div>
+  <h4>Pateikite gavėjo duomenis</h4>
+  <div class="vardas">
+    <label>Vardas*</label><br />
+    <input type="text" placeholder="Vardenis" required>
+  </div>
+  <div class="pavarde">
+    <label>Pavardė*</label>
+    <input type="text" placeholder="Pavardenis" required>
+  </div></br>
+  <div class="tel">
+    <label>Mobilaus telefono numeris*</label>
+    <input type="tel" placeholder="+37012345678" required>
+  </div>
+</div>
+</body>
+
+</html>
