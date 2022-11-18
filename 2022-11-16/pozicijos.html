@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pozicijos</title>
+  <style>
+    .relative {
+      background-color: black;
+      height: 500px;
+      width: 500px;
+      position: relative;
+      top: 50px;
+      left: 0;
+    }
+
+    .absolute {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 174, 0);
+      /* margin: 100px 0 0 250px; */
+      position: absolute;
+      /* top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; */
+    }
+
+    .bottom-right {
+      bottom: 0;
+      right: 0;
+      left: unset;
+      top: unset;
+    }
+
+    .custom-position {
+      top: 50px;
+      left: 500px;
+    }
+
+    .block {
+      margin: 8000px auto 0;
+      background-color: black;
+      width: 700px;
+      height: 300px;
+    }
+
+    .absolute-block {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: blueviolet;
+      top: 8600px;
+      left: 900px;
+    }
+
+    h1 {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Statinis turinys</h2>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis veritatis consequatur incidunt explicabo est et
+    voluptatem voluptate velit inventore? Assumenda facere aperiam, quo vitae voluptates autem debitis numquam pariatur
+    perspiciatis quisquam minus voluptatem magni at quae laboriosam veritatis nostrum culpa sunt sapiente nam facilis?
+    Exercitationem porro tenetur voluptatibus doloribus odit possimus magni perspiciatis enim dolor ex est sunt velit
+    illo quidem animi, perferendis cupiditate sed architecto maxime sit. Corrupti consectetur consequatur reprehenderit
+    quae, minus commodi neque totam molestiae nisi corporis, culpa aspernatur, veritatis omnis magnam illum. Eum autem
+    id nulla, voluptates facere laudantium doloribus velit alias neque nesciunt ipsam, rerum perspiciatis doloremque
+    perferendis iusto maxime recusandae incidunt sint. Laboriosam commodi perspiciatis repudiandae vel eius, architecto
+    harum distinctio cumque reprehenderit adipisci ipsam porro quisquam, rem ratione dolorem quas quos laudantium quam
+    magni necessitatibus facilis beatae inventore itaque. Quasi rem assumenda quidem quam et maxime adipisci est iste
+    amet, magni molestiae ratione recusandae nulla nihil ipsa quisquam dolorum aperiam accusamus esse repudiandae
+    reprehenderit debitis. Eum molestiae nemo sunt vero facere voluptate, quasi magni reiciendis consectetur debitis
+    doloremque necessitatibus vitae laudantium ducimus optio impedit ad quia ipsum repellat suscipit reprehenderit cum.
+    Pariatur delectus, doloribus ad nesciunt magni tenetur et eligendi accusantium minus id voluptates, aut itaque quis
+    sequi, eum consequatur rerum deserunt nulla cupiditate ducimus. Nemo suscipit libero sit error dolor sunt eligendi
+    reprehenderit excepturi eum saepe! Iste minus quae modi! Sunt libero fugiat nam, tenetur suscipit pariatur quis quam
+    dolor fugit ullam fuga nesciunt ut officiis quo facere? Voluptate sint aut asperiores doloremque sapiente eius
+    reprehenderit laboriosam accusantium repudiandae assumenda vel quia quaerat veniam neque totam, enim labore delectus
+    suscipit voluptatum exercitationem dolorum minima dolor eveniet natus? Doloremque sed doloribus saepe recusandae
+    impedit ex voluptatum dolorum architecto quidem tenetur! Dolores velit eum ducimus sed quos dolore eius eaque
+    cumque! Tempora voluptatum earum ex voluptatibus sapiente ipsum assumenda! Eum natus dolorem nisi perspiciatis. Sit
+    voluptas quaerat enim consectetur, aut optio quod architecto, commodi, corrupti saepe ducimus nesciunt ut
+    perferendis ex libero itaque debitis eius eos? Nemo voluptates ex quo delectus, omnis nobis rerum facilis sint!
+    Veritatis totam veniam doloribus. Consequatur ad incidunt repudiandae in quam eligendi a rem similique fugiat natus
+    praesentium atque, error soluta repellat quis exercitationem, accusantium, facilis ullam accusamus ex. Voluptatum
+    nostrum expedita facilis voluptas reprehenderit dicta, alias id cumque eos assumenda neque nobis impedit, nisi
+    veritatis eum a, modi exercitationem! Saepe libero quo quod dolor deserunt omnis magni reiciendis sed? Facere, omnis
+    numquam necessitatibus dignissimos quisquam vitae velit porro, repellat iste aliquid quaerat fugit? Commodi fugit
+    aspernatur magni. Fugiat perferendis, accusantium veritatis placeat explicabo, maxime nulla animi corporis magni,
+    architecto asperiores ducimus eos? Velit qui corrupti minima ea quam, animi repellat dolorem asperiores obcaecati
+    eligendi nisi natus nihil quos tempore! Possimus ipsum iste, dignissimos velit soluta sapiente temporibus saepe sunt
+    iure neque quos eligendi architecto commodi blanditiis deserunt impedit unde sit ratione fugiat nihil. Expedita
+    omnis nobis dolore nostrum voluptatibus nesciunt ducimus tempora in voluptas necessitatibus corrupti eum maiores,
+    error, ipsam laudantium, quisquam odit laborum repellat. Odit, facere ipsa.</p>
+  <div class="relative">
+    <h1>Statinis turinys releatyviame elemente</h1>
+    <div class="absolute bottom-right"></div>
+    <div class="absolute custom-position"></div>
+  </div>
+
+  <div class="block">
+    <div class="absolute-block"></div>
+  </div>
+</body>
+
+</html>
