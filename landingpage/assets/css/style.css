@@ -91,6 +91,27 @@ section.home .left h1 {
   margin: 0 0 18px;
 }
 
+section.home .right {
+  width: 50%;
+}
+
+section.home .iphone {
+  max-width: 350px;
+  position: absolute;
+  right: 0;
+  top: -70px;
+}
+
+section.home .iphone img {
+  width: 100%;
+}
+
+section.home .video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 section.home .left p {
   line-height: 32px;
   font-size: 19px;
