@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kondicinė logika</title>
+</head>
+
+<body>
+  <script>
+    let x = 10;
+    let y = 25;
+
+    // Atspausdinti fraze "Sveiki atvyke, jei x yra daugiau arba lygu 10, o y yra maziau arba lygu 25"
+    // && - ir
+    // || - arba
+
+
+    if (x >= 10) {
+      if (y <= 25) {
+        console.log('Sveiki atvyke')
+      }
+    }
+
+    if (x >= 10 && y >= 25) {
+      console.log('Sveiki atvyke')
+    }
+
+    // Atspausdinti fraze "Sveiki atvyke, jei x yra daugiau arba lygu 10, o y yra maziau arba lygu 25"
+
+    x = 9
+
+    if (x >= 10 || y <= 25) {
+      console.log('Sveiki atvyke')
+    }
+
+    // Atspausdinti sia uzduoti,  jei x yra daugiau arba lygu 10 arba y yra maziau arba lygu 25, arba jei abu variantai neteisingi, taciau z = lygu 20.
+
+    y = 26;
+
+    let z = 20;
+
+    if (x >= 10 && y >= 25 || z === 20) {
+      console.log('Atspausdinti sia uzduoti,  jei x yra daugiau arba lygu 10 arba y yra maziau arba lygu 25, arba jei abu variantai neteisingi, taciau z = lygu 20.')
+    }
+
+    if (
+      x === 9 &&
+      (y === 26 || z === 20)) {
+      console.log('Uzduotis');
+    }
+
+    let w = false;
+
+    if (!w)
+      console.log('Nera');
+
+    w = true;
+
+    if (w)
+      console.log('Yra');
+
+    // Ternary operatoriai
+
+    // ?- atidarom if kondicija
+    // : - atvirksciai
+
+    const lytis = 'M'
+
+    // Pirmas pavyzdys tradicinio kondicines logikos aprasymo
+
+    // if(lytis === 'M')
+    //   vardas = 'Danguole'
+    // else
+    //   vardas = 'Valdas'
+
+    // let vardas = 'Danguole';
+
+    // if (lytis != 'M')
+    //   vardas = "Valdas";
+
+    let vardas = lytis === 'M' ? 'Danguole' : 'Valdas'
+
+    console.log(vardas)
+
+
+
+
+
+  </script>
+</body>
+
+</html>

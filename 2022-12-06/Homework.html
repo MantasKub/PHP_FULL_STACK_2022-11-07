@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home work</title>
+  <style>
+    body {
+      line-height: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+
+    function rand(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    // FIRST TASK
+
+    document.write('<h2>', 'Pirma užduotis', '</h2>', '<br />')
+
+
+    let size = 49;
+    let result = '';
+
+    for (let y = 1; y <= size; y++) {
+      for (let x = 1; x <= size; x++) {
+        if (y === x || x === (size - y) + 1) {
+          result += '<span style="color: red;">*</span>'
+        } else {
+          result += '*';
+        }
+      }
+      result += '<br />'
+    }
+
+    document.write(result)
+
+    // THIRD TASK
+
+    document.write('<h2>', 'Trečia užduotis', '</h2>', '<br />')
+
+
+    document.write('<h2>', 'a', '</h2>', '<br />')
+
+
+    rezultatas = '';
+
+    while (true) {
+      const skaicius = rand(0, 1);
+      if (skaicius === 0) {
+        rezultatas += 'H';
+        break;
+      } else {
+        rezultatas += 'S';
+      }
+    }
+
+    document.write(rezultatas)
+
+
+
+    document.write('<h2>', 'b', '</h2>', '<br />')
+
+    rezultatas = '';
+    skaiciuotuvas = 0;
+
+    while (true) {
+      const skaicius = rand(0, 1);
+      if (skaicius === 0) {
+        rezultatas += 'H';
+        skaiciuotuvas++;
+      } else {
+        rezultatas += 'S';
+      }
+
+      if (skaiciuotuvas >= 3)
+        break;
+    }
+
+    document.write(rezultatas)
+
+    document.write('<h2>', 'c', '</h2>', '<br />')
+
+    rezultatas = '';
+    skaiciuotuvas = 0;
+
+    while (true) {
+      const skaicius = rand(0, 1);
+      if (skaicius === 0) {
+        rezultatas += 'H';
+        skaiciuotuvas++;
+      } else {
+        rezultatas += 'S';
+        skaiciuotuvas = 0;
+      }
+
+      if (skaiciuotuvas >= 3)
+        break;
+    }
+
+    document.write(rezultatas)
+
+
+
+
+
+    document.write('<h2>', 'Ketvirta užduotis', '</h2>', '<br />')
+
+
+    // FOURTH TASK
+
+    let numbers = [];
+    let dydis = 30;
+
+    for (let i = 0; i < dydis; i++) {
+      numbers[i] = rand(5, 25)
+    }
+
+    document.write(numbers)
+
+    document.write('<h2>', 'Penkta užduotis', '</h2>', '<br />')
+
+    // FIFTH TASK
+
+    document.write('<h2>', 'a', '</h2>', '<br />')
+
+
+    skaiciuotuvas = 0;
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] > 10)
+        skaiciuotuvas++
+    }
+
+    document.write('Reikšmių didesnių už 10 yra: ', skaiciuotuvas)
+
+    document.write('<h2>', 'b', '</h2>', '<br />')
+
+    // skaiciuotuvas = 0;
+    // for (let i = 0; i < numbers.length; i++) {
+    //   if (numbers[i] > skaiciuotuvas) {
+    //     skaiciuotuvas = numbers[i]
+    //   }
+    // }
+
+    // document.write('Didžiausia masyvo reikšmė yra: ', skaiciuotuvas)
+
+    let max = 0;
+    let indexes = [];
+
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] > max)
+        max = numbers[i];
+    }
+
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] === max)
+        indexes[indexes.length] = i;
+    }
+
+    document.write('Didžiausia masyvo reikšmė yra: ', max, '<br />, <br />')
+    document.write('Didžiausia masyvo reikšmė yra: ', indexes)
+
+    document.write('<h2>', 'c', '</h2>', '<br />')
+
+    rezultatas = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+      if (i % 2 === 0)
+        rezultatas += numbers[i];
+    }
+
+    document.write(rezultatas)
+
+
+    document.write('<h2>', 'd', '</h2>', '<br />')
+
+    rezultatas = [];
+
+    for (let i = 0; i < numbers.length; i++) {
+      rezultatas.push(numbers[i] - i);
+    }
+
+    document.write(rezultatas)
+
+    document.write('<h2>', 'e', '</h2>', '<br />')
+
+    for (let i = 0; i < 10; i++) {
+      const skaicius = rand(5, 25);
+      numbers[numbers.lenght] = skaicius;
+    }
+
+    document.write(numbers)
+
+    document.write('<h2>', 'f', '</h2>', '<br />')
+
+    const pirmasMasyvas = []
+    const antrasMasyvas = []
+
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] % 2 === 0) {
+        pirmasMasyvas[pirmasMasyvas.length] = numbers[i];
+      } else {
+        antrasMasyvas[antrasMasyvas.length] = numbers[i];
+      }
+    }
+
+    document.write(pirmasMasyvas + '<br />' + '<br />')
+    document.write(antrasMasyvas + '<br />')
+
+
+    document.write('<h2>', 'g', '</h2>', '<br />')
+
+
+    for (let i = 0; i < numbers.length; i++) {
+      if (i % 2 === 0 && numbers[i] > 15)
+        numbers[i] = 0;
+    }
+
+    document.write(numbers)
+
+    document.write('<h2>', 'h', '</h2>', '<br />')
+
+    let paskutinisMasyvas = [];
+
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] <= 10)
+        paskutinisMasyvas[paskutinisMasyvas.length] = numbers[i]
+    }
+
+    document.write(paskutinisMasyvas)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework</title>
+</head>
+
+<body>
+  <script>
+    function rand(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    // FIRST TASK
+
+    let pirmas = rand(0, 4);
+    let antras = rand(0, 4);
+
+    console.log(pirmas, antras)
+
+    let rezult = 0;
+
+
+    if (pirmas > antras) {
+      result = (pirmas / antras)
+    } else {
+      result = (antras / pirmas)
+    }
+
+    let suapvalintas = result.toFixed(2);
+
+    console.log(suapvalintas)
+
+    // SECOND TASK
+
+    let num1 = rand(0, 25);
+    let num2 = rand(0, 25);
+    let num3 = rand(0, 25);
+
+    console.log(num1, num2, num3)
+
+    if ((num1 > num2 && num1 < num3) || (num1 < num2 && num1 > num3)) {
+      result = num1
+    } else if ((num2 > num3 && num2 < num1) || (num2 < num3 && num2 > num1)) {
+      result = num2
+    } else if ((num3 > num1 && num3 < num2) || (num3 < num1 && num3 > num2))
+      result = num3
+
+    console.log(result)
+
+    // THIRD TASK
+
+    const first = "Ryan Reynolds";
+
+    const second = "Charlie Hunnam";
+
+    third = first.substring(0, 1) + first.substring(5, 6) + second.substring(0, 1) + second.substring(8, 9)
+
+    console.log(third)
+
+    // FOURTH TASK
+
+    const stringas = 'abcdefghijklmnopqrstuvwxyz';
+    const number1 = rand(0, stringas.length - 1)
+    const number2 = rand(0, stringas.length - 1)
+    const number3 = rand(0, stringas.length - 1)
+    console.log(stringas[number1] + stringas[number2] + stringas[number3])
+
+
+
+  </script>
+</body>
+
+</html>

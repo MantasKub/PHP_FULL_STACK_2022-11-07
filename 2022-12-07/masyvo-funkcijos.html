@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masyvo funkcijos</title>
+</head>
+
+<body>
+  <script>
+
+    function rand(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+
+    let masyvas = ['test', 10, 'Apelsinas', false];
+
+    // Patikrinkite masyva ar jame yra elementas su skaiciumi desimt.
+
+    if (masyvas.includes(10))
+      console.log('Tokia reiksme egzistuoja')
+
+    // Includes metodo aprasymas ne funkcijoje
+    let ieskome = 10
+
+    for (let i = 0; i < masyvas.length; i++) {
+      if (masyvas[i] === ieskome) {
+        console.log('Tokia reiksme egzistuoja')
+      }
+    }
+
+    // Stringe "Once upon a time in Hollywood" pakeiskite visas pirmas zodziu raides x didziaja
+
+    let stringas = 'Once upon a time in Hollywood';
+
+    masyvas = stringas.split(' ');
+
+    let naujasMasyvas = [];
+
+    for (let i = 0; i < masyvas.length; i++) {
+      let zodis = '';
+
+      for (let x = 0; x < masyvas[i].length; x++) {
+        zodis += x === 0 ? 'X' : masyvas[i][x];
+      }
+      naujasMasyvas[i] = zodis;
+    }
+
+    naujasMasyvas = naujasMasyvas.join(' ');
+
+    console.log(naujasMasyvas);
+
+    masyvas = []
+
+    for (let i = 0; i < 100; i++) {
+      // masyvas[masyvas.lenght] = rand(0, 100);
+      // Push metodas prideda reiksme i masyvo gala
+      masyvas.push(rand(0, 100));
+    }
+
+    let norimasPridetiMasyvas = ['Apelsinai', 'Bananai', 'Obuoliai']
+
+    // for (let i = 0; i < norimasPridetiMasyvas.length; i++) {
+    //   masyvas[masyvas.length] = norimasPridetiMasyvas[i];
+    // }
+
+    // spread sintakse
+
+    masyvas.push(...norimasPridetiMasyvas);
+
+    console.log(masyvas)
+
+    // Norint prideti reiksme i masyvo prieki
+
+    masyvas.unshift(...norimasPridetiMasyvas);
+
+    // Norint pakeisti norimas reiksmes is masyvo
+
+    norimasPridetiMasyvas = ['Audi', 'BMW', 'Fiat', 'Toyota', 'Crysler', 'Dodge'];
+
+    masyvas.splice(30, norimasPridetiMasyvas.length, ...norimasPridetiMasyvas);
+
+    console.log(masyvas);
+
+    // Norint sujungti du masyvus
+
+    let pirmasMasyvas = [false, false, false];
+    let antrasMasyvas = [true, true, true];
+
+    masyvas = pirmasMasyvas.concat(antrasMasyvas);
+
+    console.log(masyvas)
+
+    // Norint pasalinti paskutini elementa is masyvo
+    masyvas.pop();
+
+    console.log(masyvas)
+
+    // Norint pasalinti pirmaji elementa is masyvo
+
+    masyvas.shift();
+
+    console.log(masyvas)
+
+    // Norint istrinti specifine reiksme
+
+    masyvas.splice(2, 1);
+
+    console.log(masyvas)
+
+    // Norint isrusiuoti masyva
+
+    masyvas = ['BMW', 'Fiat', 'Toyota', 'Crysler', 'Dodge', 'Audi'];
+
+    masyvas.sort();
+
+    masyvas = [];
+
+    for (let i = 0; i < 100; i++) {
+      masyvas.push(rand(0, 100));
+    }
+
+    // Skaiciu rusiavimui
+    masyvas.sort((a, b) => a - b);
+
+    console.log(masyvas);
+
+    masyvas = ['BMW', 'Fiat', 'Toyota', 'Crysler', 'Dodge', 'Audi'];
+
+    masyvas.reverse();
+
+    console.log(masyvas);
+
+
+    // Patikrinimui ar reiksme yra masyvas
+
+    masyvas = ''
+
+    if (Array.isArray(masyvas)) {
+      console.log('Reiksme yra masyvas')
+    }
+    else {
+      console.log('Reiksme nera masyvas')
+    }
+
+
+    // Elemento indekso suradimui pagal reiksme
+
+    masyvas = ['BMW', 'Fiat', 'Toyota', 'Crysler', 'Dodge', 'Audi'];
+
+    masyvas.indexOf('BMW');
+
+    console.log(masyvas.indexOf('Dodge'));
+
+    // Norint konvertuoti masyva i stringa su reiksmemis atskirtomis kableliu
+
+    console.log(masyvas.toString());
+
+
+
+
+
+  </script>
+</body>
+
+</html>

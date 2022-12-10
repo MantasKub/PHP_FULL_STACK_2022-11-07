@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+
+  function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
+  // -------FIRST TASK-------
+
+  document.write('<h3>', 'First task', '</h3>')
+
+
+  let sum = 0;
+  let sum1 = 0;
+
+  // while (true) {
+  //   let taskai = rand(10, 20);
+  //   sum += taskai;
+  //   taskai++
+  //   if (sum >= 222) {
+  //     break;
+  //   } else {
+  //     let taskai1 = rand(5, 25);
+  //     sum1 += taskai1;
+  //     taskai1++;
+  //     if (sum1 >= 222) {
+  //       break;
+  //     }
+  //   }
+  // } 
+
+  let partija = 1;
+
+  while (true) {
+    let petras = rand(10, 20);
+    let kazys = rand(5, 25);
+
+    document.write('#' + partija + ' Petras surinko ' + petras + '<br />')
+    document.write('#' + partija + ' Kazys surinko ' + kazys + '<br />')
+
+    sum += petras;
+    sum1 += kazys;
+
+    partija++;
+
+    if (sum >= 222 || sum1 >= 222)
+      break;
+  }
+
+  if (sum > sum1) {
+    document.write('Partiją laimėjo Jonas <br />')
+  } else {
+    document.write('Partiją laimėjo Kazys <br />')
+  }
+
+  document.write('Jono taškų suma: ', sum, '<br />', 'Kazio taškų suma: ', sum1, '<br />')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

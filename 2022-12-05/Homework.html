@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home work</title>
+
+  <style>
+    body {
+      word-break: break-all;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function rand(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    // FIRST TASK
+
+    document.write('<h2>Pirma užduotis</h2>')
+
+    const number = rand(1, 6)
+
+    document.write('<h' + number + '>' + number + '</h' + number + '>')
+
+    // document.write(number)
+
+    // SECOND TASK
+
+    document.write('<h2>Antra užduotis</h2> <br />')
+
+
+    let random = []
+
+    for (let i = 0; i < 50; i++) {
+      random.push(rand(-10, 10))
+    }
+
+    let rezultatas = '';
+
+    for (let i = 0; i < random.length; i++) {
+      if (random[i] < 0) {
+        rezultatas += '<span style="color: green;">' + random[i] + '</span>'
+      }
+      else if (random[i] === 0) {
+        rezultatas += '<span style="color: red;">' + random[i] + '</span>'
+      }
+      else {
+        rezultatas += '<span style="color: blue;">' + random[i] + '</span>'
+      }
+    }
+
+
+    document.write(rezultatas)
+
+
+
+    document.write('<br />--------------------------------- <br />')
+
+
+    // THIRD TASK
+
+    let pirmas = 'An American in Paris'
+    let antras = 'Breakfast at Tiffanys'
+    let trecias = '2001: A Space Odyssey'
+    let ketvirtas = 'Its a Wonderful Life'
+
+    document.write(pirmas, '<br />', antras, '<br />', trecias, '<br />', ketvirtas, '<br />')
+    document.write('--------------------------------- <br />')
+
+    let balses = 'aeiyou';
+    let galutinis = '';
+
+    balses += balses.toUpperCase();
+
+    for (let i = 0; i < pirmas.length; i++) {
+      if (!balses.includes(pirmas[i]))
+        galutinis += pirmas[i];
+    }
+
+    document.write(galutinis)
+
+
+
+    let pirmas1 = pirmas
+    let antras1 = antras
+    let trecias1 = trecias
+    let ketvirtas1 = ketvirtas
+
+    pirmas1 = pirmas.replace(/[aeiou]/ig, '')
+    antras1 = antras.replace(/[aeiou]/ig, '')
+    trecias1 = trecias.replace(/[aeiou]/ig, '')
+    ketvirtas1 = ketvirtas.replace(/[aeiou]/ig, '')
+
+    document.write(pirmas1, '<br />')
+    document.write(antras1, '<br />')
+    document.write(trecias1, '<br />')
+    document.write(ketvirtas1, '<br />')
+
+    document.write('<br />--------------------------------- <br />')
+
+    // FOURTH TASK
+
+    let skaiciuotuvas = 0
+    rezultatas = '';
+
+    for (let i = 0; i < 300; i++) {
+      const skaicius = rand(0, 300);
+
+      if (skaicius > 150)
+        skaiciuotuvas++;
+
+      if (skaicius > 275) {
+        rezultatas += '<span style="color: red;">' + skaicius + '</span>;'
+      } else {
+        rezultatas += skaicius + ' ';
+      }
+    }
+
+    // const skaiciai = [];
+
+    // for (let i = 0; i < 300; i++) {
+    //   skaiciai[i] = rand(0, 300);
+    // }
+
+    document.write(rezultatas, '<br />--------------------------------- <br />')
+
+
+
+    // let didesni = 0;
+    // let rezult = '';
+    // let spalva = [];
+
+    // for (let i = 0; i < skaiciai.length; i++) {
+    //   if (skaiciai[i] > 150) {
+    //     didesni++;
+    //   }
+    //   else if (skaiciai[i] > 275) {
+    //     spalva += '<span style="color: red;">' + skaiciai[i] + '</span>'
+    //   }
+
+    // }
+
+
+    // document.write('Didesni nei 150 skaiciai:', didesni)
+
+
+    document.write('<br />--------------------------------- <br />')
+
+
+    // FIFTH TASK
+
+    rezultatas = '';
+
+    let numbers = []
+    let result = []
+
+    for (let i = 1; i < 3000; i++) {
+      if (i % 77 === 0)
+        rezultatas += (i === 2926) ? i + '' : i + ', ';
+
+    }
+
+    document.write(rezultatas)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

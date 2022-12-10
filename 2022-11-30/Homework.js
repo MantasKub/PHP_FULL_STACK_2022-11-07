@@ -1,3 +1,9 @@
+function rand(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 // FIRST TASK
 
 const a = "Ryan Reynolds";
@@ -44,6 +50,64 @@ console.log(moded);
 
 // FIFTH TASK
 
-const skaicius = rand(0, 2);
+const skaicius1 = rand(0, 2);
+const skaicius2 = rand(0, 2);
+const skaicius3 = rand(0, 2);
+const skaicius4 = rand(0, 2);
 
-console.log("zero", skaicius);
+console.log(skaicius1);
+console.log(skaicius2);
+console.log(skaicius3);
+console.log(skaicius4);
+
+let nuliai = 0;
+let vienetai = 0;
+let dvejetai = 0;
+
+if (skaicius1 === 0) {
+  nuliai++;
+}
+if (skaicius2 === 0) {
+  nuliai++;
+}
+
+if (skaicius3 === 0) {
+  nuliai++;
+}
+
+if (skaicius4 === 0) {
+  nuliai++;
+}
+
+if (skaicius1 === 1) {
+  vienetai++;
+}
+if (skaicius2 === 1) {
+  vienetai++;
+}
+
+if (skaicius3 === 1) {
+  vienetai++;
+}
+
+if (skaicius4 === 1) {
+  vienetai++;
+}
+
+if (skaicius1 === 2) {
+  dvejetai++;
+}
+if (skaicius2 === 2) {
+  dvejetai++;
+}
+
+if (skaicius3 === 2) {
+  dvejetai++;
+}
+
+if (skaicius4 === 2) {
+  dvejetai++;
+}
+
+console.log("Gauti skaičiai:", skaicius1, skaicius2, skaicius3, skaicius4);
+console.log("Gauti rezultatai:", nuliai, vienetai, dvejetai);

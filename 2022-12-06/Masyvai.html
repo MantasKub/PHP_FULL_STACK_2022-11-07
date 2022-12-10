@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masyvai</title>
+</head>
+
+<body>
+  <script>
+    const masyvas = ['Labas Pasauli', 10, false, null, 15, 20];
+    console.log(masyvas)
+
+    const products = ['Televizorius LG', 'UABHD1616548', '600.99', '1']
+
+    console.log(products)
+
+    // Multimencinis masyvas
+    const multipleProducts = [
+      ['Televizorius LG', 'UABHD1616548', '600.99', '1'],
+      ['Televizorius LG', 'UABHD1616548', '600.99', '1'],
+      ['Televizorius LG', 'UABHD1616548', '600.99', '1']
+    ]
+
+    console.log(multipleProducts[0])
+
+    // Masyvo ilgio nustatymas
+
+    console.log(multipleProducts[0].length);
+
+    // Istrynimas is masyvo
+
+    delete multipleProducts[0];
+
+    console.log(multipleProducts);
+
+    multipleProducts[1] = 'Dabar elementas tapo stringu';
+
+    console.log(multipleProducts);
+
+  </script>
+</body>
+
+</html>

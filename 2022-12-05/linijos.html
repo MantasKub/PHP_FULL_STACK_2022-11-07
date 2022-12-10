@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linijos</title>
+  <style>
+    body {
+      word-break: break-all;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    // Write metodas skirtas atvaizduoti turinį naršyklėje
+
+    document.write('<h1>Linija</h1>');
+
+    let i = 0;
+    let result = '';
+
+    while (i < 400) {
+      if (i % 50 === 0 && i != 0)
+        result += '<br />';
+      result += '*';
+      i++;
+    }
+
+    document.write(result);
+
+    // let a = 0;
+    // let rez = '';
+
+    // while (a < 100) {
+    //   if (a % 10 === 0)
+    //     rez += "<br />"
+    //   rez += '@';
+    //   a++;
+    // }
+
+
+
+    // document.write(rez)
+
+    // i = 0;
+
+    // while (true) {
+
+    //   i++;
+
+    //   if (i === 10) {
+    //     break;
+
+    //   }
+
+    //   {
+    //     if (i % 2 === 0)
+    //       console.log(i % 2)
+    //     continue;
+    //   }
+
+    // }
+
+
+
+  </script>
+</body>
+
+</html>
