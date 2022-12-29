@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      word-break: break-all;
+    }
+  </style>
+  <title>Homework</title>
+</head>
+
+<body>
+  <script>
+    function rand(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+
+
+    // --------MASYVAI------
+
+    document.write('<h3>FIRST TASK</h3>')
+
+    // let array = []
+
+    // for (let i = 0; i < 10; i++) {
+    //   array[0] = rand(5, 25)
+    //   array[1] = rand(5, 25)
+    //   array[2] = array[0] + array[1]
+    //   array[3] = array[1] + array[2]
+    //   array[4] = array[2] + array[3]
+    //   array[5] = array[3] + array[4]
+    //   array[6] = array[4] + array[5]
+    //   array[7] = array[5] + array[6]
+    //   array[8] = array[6] + array[7]
+    //   array[9] = array[7] + array[8]
+    // }
+
+    // document.write(array)
+
+    const masyvas = [rand(5, 25), rand(5, 25)]
+
+    for (let i = 2; i < 10; i++) {
+      const res = masyvas[i - 2] + masyvas[i - 1];
+      masyvas.push(res)
+    }
+
+    document.write(masyvas)
+
+
+
+
+    // -------SECOND TASK-------
+
+    document.write('<h3>SECOND TASK</h3>')
+
+    const string = 'abcdefghijklmnopqrstuvwxyz';
+    const generatedArray = [];
+
+    for (let i = 0; i < 10; i++) {
+      const count = rand(2, 20);
+      // console.log('pirmas')
+      generatedArray[i] = [];
+
+      for (let x = 0; x < count; x++) {
+        // console.log('antras')
+        const letter = string[rand(0, string.length - 1)]
+        generatedArray[i].push(letter)
+      }
+      generatedArray[i].sort()
+    }
+
+    console.log(generatedArray)
+
+    // --------FUNKCIJOS---------
+
+    // --------FIRST TASK--------
+
+    document.write('<h3>FIRST TASK</h3>')
+
+    const pakeltiLaipsniu = (skaicius, laipsnis) => {
+      // skaicius = rand(1, 5);
+      // laipsnis = rand(1, 5);
+      let lygtis = Math.pow(skaicius, laipsnis)
+      result = skaicius + ' pakelta ' + laipsnis + ' lygu: ' + lygtis
+      return result
+    }
+
+    document.write(pakeltiLaipsniu(10, 2))
+
+    // --------SECOND TASK--------
+
+    document.write('<h3>SECOND TASK</h3>')
+
+    const tekstas = (text) => {
+      document.write('<h1>', text, '</h1>')
+    }
+
+    tekstas('Labas, Pasauli')
+
+    // --------THIRD TASK--------
+
+    document.write('<h3>THIRD TASK</h3>')
+
+    const placeTag = (tekstas, tagas) => {
+      document.write("<h3>Hello, World</h3><h" + tagas + ">" + tekstas + "</h" + tagas + ">")
+    }
+    placeTag('Labas', 2)
+
+
+    // --------FOURTH TASK--------
+
+    document.write('<h3>FOURTH TASK</h3>')
+
+
+    const numberChecker = (number) => {
+      if (number === 1) {
+        return 'Skaicius 1 nera pirminis'
+      }
+      for (let i = 2; i < number; i++) {
+        if (number % i !== 0) {
+          return `Skaicius ${number} yra pirminis`
+        } else {
+          return `Skaicius ${number} nera pirminis`
+        }
+      }
+    }
+
+    document.write(numberChecker(12))
+
+    // --------FIFTH TASK--------
+
+    document.write('<h3>FIFTH TASK</h3>')
+
+    const arrayGenerator = () => {
+      array = []
+      for (let i = 0; i < 100; i++) {
+        array[array.length] = rand(997, 15991)
+      }
+      return array
+    }
+
+    document.write(arrayGenerator())
+
+    // --------SIXTH TASK--------
+
+    document.write('<h3>SIXTH TASK</h3>')
+
+    const primeNumber = (num) => {
+      for (let i = 2; num > i; i++) {
+        if (num % i === 0 && num < 5000) {
+          return false
+        }
+      }
+      return num > 1
+    }
+
+    document.write(array.filter(primeNumber))
+
+
+  </script>
+</body>
+
+</html>

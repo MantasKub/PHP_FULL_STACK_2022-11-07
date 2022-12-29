@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework</title>
+</head>
+
+<body>
+  <script>
+
+    function rand(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    // ------FIRST TASK------
+    document.write('FIRST TASK', '<br />')
+
+    const pasisveikinimas = name => document.write('Labas, ' + name)
+
+    pasisveikinimas('Ieva')
+
+    // ------SECOND TASK------
+    document.write('<br /> SECOND TASK <br />')
+
+    const letterCalc = (text) => text.length;
+
+    document.write(letterCalc('Hello, World'))
+
+    // -------THIRD TASK------
+
+    document.write('<br /> THIRD TASK <br />')
+
+    function upperLetters(firstName, secondName) {
+      const name = firstName.charAt(0).toUpperCase() + firstName.slice(1);
+      const surname = secondName.charAt(0).toUpperCase() + secondName.slice(1);
+      let asmuo = name + ' ' + surname;
+      document.write(asmuo)
+    }
+    upperLetters('mantas', 'kubiliunas')
+
+    // -----FOURTH TASK------
+
+    document.write('<br /> FOURTH TASK <br />')
+
+    function randnumb() {
+      let pirmas = rand(0, 5);
+      let antras = rand(0, 5);
+      let trecias = rand(0, 5);
+
+      console.log('', pirmas, ',', antras, ',', trecias)
+      document.write('', pirmas, ',', antras, ',', trecias)
+    }
+
+    randnumb()
+
+    // -----FIFTH TASK------
+
+    document.write('<br /> FIFTH TASK <br />')
+
+    // function fifthFunction(from, to, limit) {
+    //   if (typeof from !== 'number' || typeof to !== 'number' || typeof limit !== 'number')
+    //     return 'Reikšmės nėra skaičiai'
+
+    //   let array = [];
+
+    //   for (i = 0; i < limit; i++)
+    //     array.push(rand(from, to));
+
+    //   return array;
+    // }
+
+    // document.write(fifthFunction(6, 80, 15))
+
+    const arrayGenerator = (from, to, limit) => {
+      if (typeof from != 'number' ||
+        typeof to != 'number' ||
+        typeof limit != 'number')
+
+        return 'Neteisingai perduoti argumentai'
+
+      const array = []
+
+      for (let i = 0; i < limit; i++) {
+        array[array.length] = rand(from, to);
+      }
+      return array
+    }
+
+    console.log(arrayGenerator(10, 15, 35))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

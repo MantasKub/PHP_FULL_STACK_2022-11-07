@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    // Grazinama dabartine data ir laikas Unix timestap pavidalu
+    Date.now();
+
+    const date = new Date();
+
+    console.log(date)
+
+    // Sios dienos paemimas skaitiniu pavidalu
+    console.log(date.getDate());
+    // Sios menesio paemimas skaitiniu pavidalu(pirmas menesis zymimas 0(bugas))
+    console.log(date.getMonth());
+    // Siu metu paemimas skaitiniu pavidalu
+    console.log(date.getFullYear());
+    // Valandu paemimas skaitiniu pavidalu
+    console.log(date.getHours());
+    // Minuciu paemimas skaitiniu pavidalu
+    console.log(date.getMinutes());
+    // Sekundziu paemimas skaitiniu pavidalu
+    console.log(date.getSeconds());
+
+    // Siulaikinis parasymas
+    // Jeigu norime atvaizduoti tik data vieitniu formatu
+    console.log(date.toLocaleDateString('lt-LT'))
+    // Jeigu norime atvaizduoti tik laika vieitniu formatu
+    console.log(date.toLocaleTimeString('lt-LT'))
+    // Jeigu norim atvaizdyori laika ir data kartu
+    console.log(date.toLocaleString('lt-LT'))
+  </script>
+</body>
+
+</html>

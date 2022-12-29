@@ -58,6 +58,11 @@ header {
   z-index: 2;
 }
 
+header.scrolling {
+  background: rgb(140, 60, 206);
+  z-index: 10;
+}
+
 header .container {
   display: flex;
   justify-content: space-between;
@@ -381,6 +386,11 @@ section.tabs .color-4 {
 section.tabs .content {
   display: flex;
   padding-top: 3rem;
+  display: none;
+}
+
+#section-1 {
+  display: flex;
 }
 
 section.tabs .left,

@@ -23,35 +23,13 @@
   let sum = 0;
   let sum1 = 0;
 
-  // while (true) {
-  //   let taskai = rand(10, 20);
-  //   sum += taskai;
-  //   taskai++
-  //   if (sum >= 222) {
-  //     break;
-  //   } else {
-  //     let taskai1 = rand(5, 25);
-  //     sum1 += taskai1;
-  //     taskai1++;
-  //     if (sum1 >= 222) {
-  //       break;
-  //     }
-  //   }
-  // } 
-
-  let partija = 1;
 
   while (true) {
     let petras = rand(10, 20);
     let kazys = rand(5, 25);
 
-    document.write('#' + partija + ' Petras surinko ' + petras + '<br />')
-    document.write('#' + partija + ' Kazys surinko ' + kazys + '<br />')
-
     sum += petras;
     sum1 += kazys;
-
-    partija++;
 
     if (sum >= 222 || sum1 >= 222)
       break;
@@ -64,6 +42,49 @@
   }
 
   document.write('Jono taškų suma: ', sum, '<br />', 'Kazio taškų suma: ', sum1, '<br />')
+
+
+  // --------SECIND TASK------
+
+  document.write('<h3>', 'Second task', '</h3>')
+
+  let counter = 0;
+
+  for (let i = 0; i < 5; i++) {
+    let limit = 85;
+
+    while (limit > 0) {
+      limit -= rand(5, 20);
+      // console.log(limit)
+      counter++;
+    }
+  }
+
+  document.write('Įkalti penkis vinis prireikė ' + counter + ' smūgių')
+
+  document.write('<h3>', 'Second task(b)', '</h3>')
+
+  counter = 0;
+
+  for (let i = 0; i < 5; i++) {
+    let limit = 85;
+
+    while (limit > 0) {
+      if (rand(0, 1) === 1) {
+        console.log('Į vinį nepataikėme')
+        continue;
+      }
+      limit -= rand(20, 30);
+      // console.log(limit)
+      counter++;
+    }
+  }
+
+  document.write(counter)
+
+
+
+
 
 
 

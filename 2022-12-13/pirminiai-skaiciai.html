@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    function rand(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    // Parasykite funkcija, kuri skaiciuotu is kiek skiaciu jos argumentas dalijasi be liekanos (isskyrus v-1 ir pati save).
+
+    const primeNumberChecker = number => {
+      let counter = 0;
+      for (let i = 2; i < number; i++) {
+        if (number % i === 0)
+          counter++;
+      }
+      return counter;
+    }
+
+    console.log(primeNumberChecker(50));
+
+    // Sugeneruokite masyva is 100 elementu, kurio reiksmes atsitiktianiai skaiciai nuo 333 iki 777.
+
+    const array = [];
+
+    for (let i = 0; i < 100; i++) {
+      const number = rand(333, 777);
+      array.push(number);
+    }
+
+    const filteredArray = array.filter(el => primeNumberChecker(el) === 0)
+  </script>
+</body>
+
+</html>
