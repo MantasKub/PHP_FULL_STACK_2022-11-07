@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random User Generator</title>
+  <style>
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      background-color: #999;
+    }
+
+    .container {
+      background-color: white;
+      max-width: 730px;
+      padding: 20px 0;
+      border-radius: 3px;
+      box-shadow: 0 0 1px rgb(0 0 0 / 50%);
+      text-align: center;
+      position: relative;
+    }
+
+
+    ul {
+      list-style: none;
+      display: flex;
+    }
+
+    .user_photo {
+      position: relative;
+      background-color: white;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 30px;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .user_photo img {
+      width: 140px;
+      border-radius: 50%;
+      border: 0;
+      padding-top: 4px;
+    }
+
+    .user_title {
+      color: #999;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .info {
+      color: #2c2e31;
+      font-size: 38px;
+      margin: 5px;
+      text-align: center;
+    }
+
+
+    i {
+      cursor: pointer;
+      display: block;
+      width: 55px;
+      height: 55px;
+      float: left;
+      margin: 20px;
+      font-size: 30px;
+      color: #999;
+      transition: all 0.5s ease-out;
+    }
+
+    i:hover {
+      color: rgb(131, 160, 131);
+    }
+
+    .btn {
+      background-color: rgb(131, 160, 131);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="info">
+      <div id="user_photo" class="user_photo">
+      </div>
+      <div id="user_info"></div>
+      <div class="icons">
+        <ul class="list d-flex justify-content-center">
+          <li id="name" onmouseenter="changeContent(name)"><i class="bi bi-person-circle"></i></li>
+          <li id="email" onmouseenter="changeContent(email)"><i class="bi bi-envelope"></i></li>
+          <li id="calendar" onmouseenter="changeContent(calendar)"><i class="bi bi-calendar4-week"></i></li>
+          <li id="pin" onmouseenter="changeContent(pin)"><i class="bi bi-geo-alt"></i></li>
+          <li id="phone" onmouseenter="changeContent(phone)"><i class="bi bi-telephone-fill"></i></li>
+          <li id="password" onmouseenter="changeContent(password)"><i class="bi bi-lock"></i></li>
+        </ul>
+      </div>
+    </div>
+    <button class="btn" onclick="userGenerator()">New</button>
+  </div>
+  <script>
+
+
+    const userGenerator = (e) => {
+
+      fetch('https://randomuser.me/api/')
+        .then(result => result.json())
+        .then(result => {
+          // console.log(result.results[0])
+
+
+          let picture = `<img src="${result.results[0].picture.large}" />`
+
+          document.getElementById('user_photo').innerHTML = picture;
+
+
+          name = `<p class="user_title">Hi, My name is</p>` +
+            `<p class="info">${result.results[0].name.first} ${result.results[0].name.last}</p>`;
+
+          email = `<p class="user_title">My email adress is</p>` +
+            `<p class="info">${result.results[0].email}</p>`;
+
+          calendar = `<p class="user_title">My birthday is</p>` +
+            `<p class="info">${result.results[0].dob.date.slice(0, 10)}</p>`;
+
+          pin = `<p class="user_title">My adress is</p>` +
+            `<p class="info">${result.results[0].location.street.number} ${result.results[0].location.street.name}</p>`;
+
+          phone = `<p class="user_title">My phone number is</p>` +
+            `<p class="info">${result.results[0].phone}</p>`;
+
+          password = `<p class="user_title">My password is</p>` +
+            `<p class="info">${result.results[0].login.password}</p>`;
+
+
+
+
+          changeContent = (name) => {
+            document.getElementById('user_info').innerHTML = name;
+          };
+          changeContent = (email) => {
+            document.getElementById('user_info').innerHTML = email;
+          };
+          changeContent = (calendar) => {
+            document.getElementById('user_info').innerHTML = calendar;
+          };
+          changeContent = (pin) => {
+            document.getElementById('user_info').innerHTML = pin;
+          };
+          changeContent = (password) => {
+            document.getElementById('user_info').innerHTML = password;
+          };
+        });
+      changeContent(name)
+      changeContent(email)
+      changeContent(namecalendar)
+      changeContent(pin)
+      changeContent(password)
+    }
+
+    userGenerator()
+
+
+
+
+
+  </script>
+</body>
+
+</html>

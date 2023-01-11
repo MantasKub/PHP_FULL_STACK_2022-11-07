@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: bisque;
+      display: flex;
+    }
+
+    #app {
+      width: 400px;
+      height: 400px;
+      background: black;
+      position: relative;
+    }
+
+    .box {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      background: red;
+      top: 0;
+      left: 0;
+    }
+
+    .points-board {
+      margin-left: 30px;
+
+    }
+
+    button {
+      margin-top: 240px;
+    }
+  </style>
+  <title>Cube game</title>
+</head>
+
+<body>
+  <div class="container">
+    <div id="app">
+      <div class="box" onclick="addPoints()"></div>
+    </div>
+    <div class="points-board">
+      <h4>Timer</h4>
+      <p>My points</p>
+      <p>Computer points</p>
+      <button onclick="startGame()">Start Game</button>
+    </div>
+  </div>
+
+
+  <script>
+
+    function rand(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    startGame = () => {
+
+      setInterval(() => {
+        document.querySelector('.box').style.top = rand(0, 350) + 'px';
+        document.querySelector('.box').style.left = rand(0, 350) + 'px';
+      }, 1000)
+
+      setTimeout(() => {
+
+      })
+
+
+
+
+    }
+
+
+
+
+
+  </script>
+</body>
+
+</html>
