@@ -47,7 +47,7 @@ const App = () => {
       <div className="container">
         <h1>Advice Generator</h1>
         <div className="advice">
-          <span>"{advice?.text}" ({advice?.count})</span>\
+          <span>"{advice?.text}" ({advice?.count})</span>
           {/* Jeigu advice objektas - toliau vykdome veiksmus */}
         </div>
         <div className="btn btn-success" onClick={() => setRefresh(!refresh)}> New advice</div>
