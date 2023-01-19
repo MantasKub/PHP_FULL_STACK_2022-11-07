@@ -1,0 +1,22 @@
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css);
+
+.container {
+  max-width: 800px;
+  background-color: rgb(106, 100, 124);
+  height: 600px;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+.done span {
+  text-decoration: line-through;
+}
+
+li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+h1 {
+  text-align: center;
+}
